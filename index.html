@@ -1,5 +1,49 @@
 <!DOCTYPE html>
-<html>
-    <head></head>
-    <body></body>
+<html lang="en">
+
+<head>
+    <title> COOL FORM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app.css" />
+</head>
+
+<body>
+    <h1>Signup Form</h1>
+    <form class="confullnametainer">
+        <label for="fname">Full name:</label><br />
+        <input id="fname" type="text" /><br />
+
+        <label for="username">Username:</label><br />
+        <input id="username" type="text" minlength="6" /><br />
+
+        <label for="password" class="password">Password (no spaces)</label><br />
+        <input id="password" type="password" required pattern="^[\S]+$" minlength="8" /> <br>
+
+        <label for="age">Age</label><br />
+        <input id="age" required type="number" min="8" max="120" /> <br>
+
+        <label for="email">Email</label><br />
+        <input id="email" type="email" /> <br>
+
+        <label for="gender">Gender</label><br />
+        <select name="gender" id="gender" required>
+            <option value="" selected disabled hidden>Choose here</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+            <option value="refuse">Refuse to Answe</option>
+        </select>
+        <br><br/>
+
+        <label required for="terms">Accept our <a href="https://monday-u.com/terms-conditions/" target="_blank"
+                required>terms and conditions
+            </a>
+            <input  id="terms" type="checkbox" class="termsBtn" required/> <br>
+
+    </form>
+    <div>
+        <button>Submit form</button>
+    </div>
+</body>
+
 </html>
